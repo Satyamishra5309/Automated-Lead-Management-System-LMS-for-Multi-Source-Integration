@@ -11,7 +11,7 @@ const downloadExcel = async () => {
   try {
     const API_URL = import.meta.env.VITE_API_URL;
     const response = await fetch(
-       `${API_URL}/api/reports/excel`,
+       `${API_URL}/reports/excel`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -42,7 +42,7 @@ const downloadPDF = async () => {
   try {
     const API_URL = import.meta.env.VITE_API_URL;
     const response = await fetch(
-      `${API_URL}/api/reports/pdf`,
+      `${API_URL}/reports/pdf`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`
