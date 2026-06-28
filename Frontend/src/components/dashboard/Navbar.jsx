@@ -70,7 +70,7 @@ const Navbar = () => {
 
   return (
 
-    <div className="bg-white border border-gray-100 rounded-3xl shadow-md px-4 md:px-8 py-4 md:py-6 flex flex-col lg:flex-row justify-between lg:items-center gap-5">
+    <div className="bg-white border border-gray-100 rounded-3xl shadow-md md:px-8 py-4 md:py-6 mt-6 flex flex-col lg:flex-row justify-between lg:items-center gap-5">
 
 
 

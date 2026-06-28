@@ -16,7 +16,17 @@ const DashboardLayout = ({
 
         {showNavbar && <Navbar />}
 
-        <div className={`${showNavbar ? "mt-6 md:mt-8" : ""} pt-12 md:pt-0`}>
+        <div
+          className={`${
+            showNavbar
+              ? "mt-6 md:mt-8"
+              : ""
+          } ${
+            showNavbar
+              ? "pt-14 md:pt-0"
+              : "pt-12 md:pt-0"
+          }`}
+        >
 
           {children}
 
