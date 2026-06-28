@@ -1,58 +1,75 @@
 import mongoose from "mongoose";
 
-const leadSchema = new mongoose.Schema(
-  {
-    name: {
-      type: String,
-      required: true
-    },
+const leadSchema = new mongoose.Schema({
 
-    email: {
-      type: String
-    },
-
-    phone: {
-      type: String,
-      required: true
-    },
-
-    source: {
-      type: String,
-      enum: [
-        "website",
-        "facebook",
-        "instagram",
-        "google"
-      ],
-      required: true
-    },
-
-    campaign: {
-      type: String
-    },
-
-    status: {
-      type: String,
-      enum: [
-        "new",
-        "contacted",
-        "converted",
-        "lost"
-      ],
-      default: "new"
-    },
-
-    assignedTo: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User"
-    }
+  name: {
+    type: String,
+    required: true
   },
 
-  {
-    timestamps: true
-  }
-);
+  email: {
+    type: String
+  },
 
-const Lead = mongoose.model("Lead", leadSchema);
+  phone: {
+    type: String,
+    required: true
+  },
+
+  service: {
+    type: String
+  },
+
+  source: {
+    type: String,
+
+    enum: [
+      "website",
+      "facebook",
+      "instagram",
+      "google"
+    ],
+
+    required: true
+  },
+
+  campaign: {
+    type: String
+  },
+
+  keyword: {
+    type: String
+  },
+
+  status: {
+    type: String,
+
+    enum: [
+      "new",
+      "contacted",
+      "converted",
+      "lost"
+    ],
+
+    default: "new"
+  },
+
+  assignedTo: {
+  type: String,
+  default: "Unassigned"
+},
+
+  importedAt: {
+    type: Date,
+
+    default: Date.now
+  }
+
+}, {
+  timestamps: true
+});
+
+const Lead =
+  mongoose.model("Lead", leadSchema);
 
 export default Lead;

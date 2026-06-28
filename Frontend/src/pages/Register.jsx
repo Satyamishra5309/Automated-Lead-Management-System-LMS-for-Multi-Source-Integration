@@ -4,28 +4,34 @@ import { ArrowLeft } from "lucide-react";
 
 import Input from "../components/ui/Input";
 import Button from "../components/ui/Button";
-import { loginUser } from "../api/authApi";
-import { useDispatch } from "react-redux";
-import { loginSuccess } from "../features/auth/authSlice";
+import { registerUser } from "../api/authApi";
 
-const Login = () => {
+const Register = () => {
 
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   const [formData, setFormData] =
     useState({
+
+      name: "",
+
       email: "",
+
       password: ""
     });
 
+
   const handleChange = (e) => {
+
     setFormData({
+
       ...formData,
+
       [e.target.name]:
         e.target.value
     });
   };
+
 
   const handleSubmit =
    async (e) => {
@@ -34,50 +40,53 @@ const Login = () => {
 
     try {
 
-      const data =
-       await loginUser(
-         formData
-       );
-
-      localStorage.setItem(
-        "token",
-        data.token
+      await registerUser(
+        formData
       );
 
-      dispatch(
-        loginSuccess(data)
+      alert(
+        "Registration Successful"
       );
 
-      navigate("/dashboard");
+      navigate("/login");
 
     } catch (error) {
-      alert("Login failed");
+
+      alert(
+        "Registration failed"
+      );
     }
   };
+
 
   return (
 
     <div className="min-h-screen grid grid-cols-2">
 
+
       <div className="bg-gradient-to-br from-indigo-700 to-purple-800 text-white p-16 flex flex-col justify-center">
 
         <h1 className="text-5xl font-bold mb-6">
+
           LMS Pro
+
         </h1>
 
         <p className="text-xl mb-10 opacity-90">
-          Automate your lead management and analytics workflow.
+
+          Join businesses managing leads smarter and faster.
+
         </p>
 
         <div className="space-y-4">
 
-          <p>✓ Website Lead Sync</p>
+          <p>✓ Easy Setup</p>
 
-          <p>✓ Meta Ads Integration</p>
+          <p>✓ Multi Platform Integration</p>
 
-          <p>✓ Google Ads Tracking</p>
+          <p>✓ Secure Authentication</p>
 
-          <p>✓ Real Time Analytics</p>
+          <p>✓ Analytics Dashboard</p>
 
         </div>
 
@@ -88,7 +97,6 @@ const Login = () => {
       <div className="bg-slate-50 flex justify-center items-center">
 
         <div className="bg-white p-10 rounded-2xl shadow-xl w-[450px]">
-
 
           <button
             onClick={() =>
@@ -107,7 +115,7 @@ const Login = () => {
 
           <h2 className="text-4xl font-bold mb-8">
 
-            Welcome Back
+            Create Account
 
           </h2>
 
@@ -116,6 +124,14 @@ const Login = () => {
             onSubmit={handleSubmit}
             className="space-y-4"
           >
+
+            <Input
+              name="name"
+              placeholder="Full Name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+
 
             <Input
               name="email"
@@ -127,8 +143,8 @@ const Login = () => {
 
             <Input
               name="password"
-              placeholder="Password"
               type="password"
+              placeholder="Password"
               value={formData.password}
               onChange={handleChange}
             />
@@ -137,7 +153,9 @@ const Login = () => {
             <Button
               type="submit"
             >
-              Login
+
+              Create Account
+
             </Button>
 
           </form>
@@ -145,18 +163,18 @@ const Login = () => {
 
           <p className="mt-6 text-center">
 
-            New here?
+            Already have account?
 
             <span
 
               onClick={() =>
-                navigate("/register")
+                navigate("/login")
               }
 
               className="text-indigo-600 cursor-pointer ml-2"
             >
 
-              Register
+              Login
 
             </span>
 
@@ -170,4 +188,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
