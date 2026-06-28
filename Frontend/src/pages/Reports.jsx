@@ -9,8 +9,9 @@ const Reports = () => {
 
 const downloadExcel = async () => {
   try {
+    const API_URL = import.meta.env.VITE_API_URL;
     const response = await fetch(
-      "http://localhost:8000/api/reports/excel",
+       `${API_URL}/api/reports/excel`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -39,8 +40,9 @@ const downloadExcel = async () => {
 
 const downloadPDF = async () => {
   try {
+    const API_URL = import.meta.env.VITE_API_URL;
     const response = await fetch(
-      "http://localhost:8000/api/reports/pdf",
+      `${API_URL}/api/reports/pdf`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`
