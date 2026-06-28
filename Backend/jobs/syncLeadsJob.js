@@ -17,7 +17,7 @@ import fetchWebsiteLeads from "../services/websiteService.js";
 const startLeadSyncJob = () => {
 
  cron.schedule(
- "* * * * *",
+ "0 0 * * *",
 
  async()=>{
 
