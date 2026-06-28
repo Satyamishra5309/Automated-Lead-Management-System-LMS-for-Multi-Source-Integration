@@ -24,6 +24,10 @@ app.use(express.json());
 connectDB();
 startLeadSyncJob();
 
+app.get("/", (req, res) => {
+  res.send("API is running");
+});
+
 app.get(
   "/protected",
   protect,
