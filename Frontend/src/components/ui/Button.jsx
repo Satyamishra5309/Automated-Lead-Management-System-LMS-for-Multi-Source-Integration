@@ -1,4 +1,3 @@
-
 const Button = ({
   children,
   onClick,
@@ -9,7 +8,7 @@ const Button = ({
     <button
       type={type}
       onClick={onClick}
-      className={`w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg font-medium transition ${className}`}
+      className={`w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2.5 md:py-3 rounded-lg font-medium transition ${className}`}
     >
       {children}
     </button>

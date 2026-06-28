@@ -57,15 +57,15 @@ const Login = () => {
 
   return (
 
-    <div className="min-h-screen grid grid-cols-2">
+    <div className="min-h-screen grid grid-cols-1 md:grid-cols-2">
 
-      <div className="bg-gradient-to-br from-indigo-700 to-purple-800 text-white p-16 flex flex-col justify-center">
+      <div className="bg-gradient-to-br from-indigo-700 to-purple-800 text-white p-8 md:p-16 flex flex-col justify-center">
 
-        <h1 className="text-5xl font-bold mb-6">
+        <h1 className="text-3xl md:text-5xl font-bold mb-6">
           LMS Pro
         </h1>
 
-        <p className="text-xl mb-10 opacity-90">
+        <p className="text-base md:text-xl mb-10 opacity-90">
           Automate your lead management and analytics workflow.
         </p>
 
@@ -85,9 +85,9 @@ const Login = () => {
 
 
 
-      <div className="bg-slate-50 flex justify-center items-center">
+      <div className="bg-slate-50 flex justify-center items-center p-4">
 
-        <div className="bg-white p-10 rounded-2xl shadow-xl w-[450px]">
+        <div className="bg-white p-6 md:p-10 rounded-2xl shadow-xl w-full max-w-[450px]">
 
 
           <button
@@ -105,7 +105,7 @@ const Login = () => {
           </button>
 
 
-          <h2 className="text-4xl font-bold mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">
 
             Welcome Back
 

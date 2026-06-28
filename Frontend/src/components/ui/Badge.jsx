@@ -1,4 +1,3 @@
-
 const Badge = ({ type, text }) => {
   const styles = {
     new: "bg-yellow-100 text-yellow-700",
@@ -13,7 +12,7 @@ const Badge = ({ type, text }) => {
 
   return (
     <span
-      className={`px-3 py-1 rounded-full text-xs font-semibold ${
+      className={`px-2 md:px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${
         styles[type] || "bg-gray-100 text-gray-700"
       }`}
     >

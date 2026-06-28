@@ -46,7 +46,7 @@ const Analytics = () => {
 
     <DashboardLayout>
 
-      <h1 className="text-3xl font-bold mb-8">
+      <h1 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
 
         Analytics Center
 

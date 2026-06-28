@@ -1,4 +1,3 @@
-
 import {
   useEffect,
   useState,
@@ -107,7 +106,7 @@ const Leads = () => {
 
     <DashboardLayout>
 
-      <h1 className="text-3xl font-bold mb-6">
+      <h1 className="text-2xl md:text-3xl font-bold mb-6">
 
         Leads Management
 
@@ -115,7 +114,7 @@ const Leads = () => {
 
 
 
-      <div className="bg-white p-6 rounded-2xl shadow-lg mb-6">
+      <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg mb-6">
 
 
         <input
@@ -145,7 +144,7 @@ const Leads = () => {
               )
             }
 
-            className={`px-4 py-2 rounded-xl font-medium transition ${
+            className={`px-3 md:px-4 py-2 rounded-xl font-medium transition ${
               statusFilter === "all"
 
               ?
@@ -176,7 +175,7 @@ const Leads = () => {
               )
             }
 
-            className={`px-4 py-2 rounded-xl transition ${
+            className={`px-3 md:px-4 py-2 rounded-xl transition ${
               statusFilter === "new"
 
               ?
@@ -211,7 +210,7 @@ const Leads = () => {
               )
             }
 
-            className={`px-4 py-2 rounded-xl transition ${
+            className={`px-3 md:px-4 py-2 rounded-xl transition ${
               statusFilter === "contacted"
 
               ?
@@ -247,7 +246,7 @@ const Leads = () => {
               )
             }
 
-            className={`px-4 py-2 rounded-xl transition ${
+            className={`px-3 md:px-4 py-2 rounded-xl transition ${
               statusFilter === "converted"
 
               ?
@@ -282,7 +281,7 @@ const Leads = () => {
               )
             }
 
-            className={`px-4 py-2 rounded-xl transition ${
+            className={`px-3 md:px-4 py-2 rounded-xl transition ${
               statusFilter === "lost"
 
               ?

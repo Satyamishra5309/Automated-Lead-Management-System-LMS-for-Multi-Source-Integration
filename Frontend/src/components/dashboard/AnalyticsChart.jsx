@@ -4,6 +4,7 @@ import {
   XAxis,
   YAxis,
   Tooltip,
+  ResponsiveContainer,
 } from "recharts";
 
 const data = [
@@ -14,23 +15,29 @@ const data = [
 
 const AnalyticsChart = () => {
   return (
-    <div className="bg-white p-6 rounded-xl shadow">
+    <div className="bg-white p-4 md:p-6 rounded-xl shadow">
 
-      <BarChart
-        width={500}
-        height={300}
-        data={data}
-      >
+      <div className="w-full h-[300px]">
 
-        <XAxis dataKey="name" />
+        <ResponsiveContainer width="100%" height="100%">
 
-        <YAxis />
+          <BarChart
+            data={data}
+          >
 
-        <Tooltip />
+            <XAxis dataKey="name" />
 
-        <Bar dataKey="leads" />
+            <YAxis />
 
-      </BarChart>
+            <Tooltip />
+
+            <Bar dataKey="leads" />
+
+          </BarChart>
+
+        </ResponsiveContainer>
+
+      </div>
 
     </div>
   );

@@ -3,7 +3,7 @@ const FilterBar = ({
   setSearch,
 }) => {
   return (
-    <div className="bg-white p-4 rounded-xl shadow mb-6">
+    <div className="bg-white p-3 md:p-4 rounded-xl shadow mb-6">
 
       <input
         value={search}
@@ -13,7 +13,7 @@ const FilterBar = ({
 
         placeholder="Search leads..."
 
-        className="border px-4 py-2 rounded-lg w-full"
+        className="border px-3 md:px-4 py-2 rounded-lg w-full"
       />
 
     </div>

@@ -70,13 +70,13 @@ const Navbar = () => {
 
   return (
 
-    <div className="bg-white border border-gray-100 rounded-3xl shadow-md px-8 py-6 flex justify-between items-center">
+    <div className="bg-white border border-gray-100 rounded-3xl shadow-md px-4 md:px-8 py-4 md:py-6 flex flex-col lg:flex-row justify-between lg:items-center gap-5">
 
 
 
       <div>
 
-        <h2 className="text-3xl font-bold text-slate-800">
+        <h2 className="text-xl md:text-3xl font-bold text-slate-800">
 
           {greeting},
 
@@ -91,7 +91,7 @@ const Navbar = () => {
         </h2>
 
 
-        <p className="text-sm text-gray-500 mt-1">
+        <p className="text-xs md:text-sm text-gray-500 mt-1">
 
           Lead Management System monitoring all incoming channels
 
@@ -101,12 +101,12 @@ const Navbar = () => {
 
 
 
-      <div className="flex items-center gap-5">
+      <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 md:gap-5">
 
 
 
 
-        <div className="bg-blue-50 px-5 py-3 rounded-2xl min-w-[150px]">
+        <div className="bg-blue-50 px-4 md:px-5 py-3 rounded-2xl w-full sm:w-auto min-w-0 md:min-w-[150px]">
 
           <div className="flex items-center gap-2">
 
@@ -127,7 +127,7 @@ const Navbar = () => {
           </div>
 
 
-          <p className="font-bold text-blue-700 text-xl mt-1">
+          <p className="font-bold text-blue-700 text-lg md:text-xl mt-1">
 
             {newLeadsToday}
 
@@ -141,7 +141,7 @@ const Navbar = () => {
 
 
 
-        <div className="bg-green-50 px-5 py-3 rounded-2xl min-w-[170px]">
+        <div className="bg-green-50 px-4 md:px-5 py-3 rounded-2xl w-full sm:w-auto min-w-0 md:min-w-[170px]">
 
           <div className="flex items-center gap-2">
 
@@ -162,7 +162,7 @@ const Navbar = () => {
           </div>
 
 
-          <p className="font-semibold text-green-700 mt-1">
+          <p className="font-semibold text-green-700 mt-1 text-sm md:text-base">
 
             {syncStatus}
 
@@ -172,9 +172,9 @@ const Navbar = () => {
 
 
 
-        <div className="flex items-center gap-3 border-l pl-5">
+        <div className="flex items-center gap-3 border-l pl-4 md:pl-5">
 
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold text-lg flex justify-center items-center shadow-md">
+          <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold text-base md:text-lg flex justify-center items-center shadow-md">
 
             {
 
@@ -190,7 +190,7 @@ const Navbar = () => {
 
           <div>
 
-            <p className="font-semibold text-slate-800">
+            <p className="font-semibold text-slate-800 text-sm md:text-base">
 
               {adminName}
 

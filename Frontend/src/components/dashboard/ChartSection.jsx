@@ -3,6 +3,7 @@ import {
   Pie,
   Cell,
   Tooltip,
+  ResponsiveContainer,
 
   BarChart,
   Bar,
@@ -27,77 +28,88 @@ const ChartSection = ({
 
   return (
 
-    <div className="grid grid-cols-2 gap-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
 
 
-      <div className="bg-white rounded-2xl p-6 shadow-lg">
+      <div className="bg-white rounded-2xl p-4 md:p-6 shadow-lg">
 
         <h2 className="font-semibold mb-6">
           Lead Sources
         </h2>
 
-        <PieChart
-          width={350}
-          height={300}
-        >
+        <div className="w-full h-[300px]">
 
-          <Pie
-            data={sourceStats}
+          <ResponsiveContainer width="100%" height="100%">
 
-            dataKey="count"
+            <PieChart>
 
-            nameKey="_id"
+              <Pie
+                data={sourceStats}
 
-            outerRadius={100}
-          >
+                dataKey="count"
 
-            {sourceStats.map(
-              (_, index) => (
+                nameKey="_id"
 
-                <Cell
-                  key={index}
-                  fill={
-                    colors[index]
-                  }
-                />
-              )
-            )}
+                outerRadius={100}
+              >
 
-          </Pie>
+                {sourceStats.map(
+                  (_, index) => (
 
-          <Tooltip />
+                    <Cell
+                      key={index}
+                      fill={
+                        colors[index]
+                      }
+                    />
+                  )
+                )}
 
-        </PieChart>
+              </Pie>
+
+              <Tooltip />
+
+            </PieChart>
+
+          </ResponsiveContainer>
+
+        </div>
 
       </div>
 
 
-      <div className="bg-white rounded-2xl p-6 shadow-lg">
+      <div className="bg-white rounded-2xl p-4 md:p-6 shadow-lg">
 
         <h2 className="font-semibold mb-6">
           Lead Status
         </h2>
 
-        <BarChart
-          width={400}
-          height={300}
-          data={statusStats}
-        >
+        <div className="w-full h-[300px]">
 
-          <XAxis
-            dataKey="_id"
-          />
+          <ResponsiveContainer width="100%" height="100%">
 
-          <YAxis />
+            <BarChart
+              data={statusStats}
+            >
 
-          <Tooltip />
+              <XAxis
+                dataKey="_id"
+              />
 
-          <Bar
-            dataKey="count"
-            fill="#4F46E5"
-          />
+              <YAxis />
 
-        </BarChart>
+              <Tooltip />
+
+              <Bar
+                dataKey="count"
+                fill="#4F46E5"
+              />
+
+            </BarChart>
+
+          </ResponsiveContainer>
+
+        </div>
 
       </div>
 

@@ -71,14 +71,14 @@ const downloadPDF = async () => {
 
     <DashboardLayout>
 
-      <h1 className="text-3xl font-bold mb-8">
+      <h1 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
 
         Reports Center
 
       </h1>
 
 
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
 
         <ReportCard
 
@@ -114,7 +114,7 @@ const downloadPDF = async () => {
 
       {/* History */}
 
-      <div className="bg-white rounded-2xl shadow-lg p-6 mt-8">
+      <div className="bg-white rounded-2xl shadow-lg p-4 md:p-6 mt-6 md:mt-8">
 
         <h2 className="font-semibold mb-4">
 

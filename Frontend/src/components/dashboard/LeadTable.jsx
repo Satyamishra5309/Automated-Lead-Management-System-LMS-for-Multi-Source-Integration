@@ -34,23 +34,23 @@ const LeadTable = ({ leads }) => {
 
   return (
 
-    <div className="bg-white rounded-2xl shadow-lg p-6 overflow-x-auto">
+    <div className="bg-white rounded-2xl shadow-lg p-4 md:p-6 overflow-x-auto">
 
-      <table className="w-full">
+      <table className="w-full min-w-[750px]">
 
         <thead>
 
-          <tr className="border-b text-left text-gray-500">
+          <tr className="border-b text-left text-gray-500 text-sm md:text-base">
 
-            <th>Lead</th>
+            <th className="pb-3">Lead</th>
 
-            <th>Source</th>
+            <th className="pb-3">Source</th>
 
-            <th>Status</th>
+            <th className="pb-3">Status</th>
 
-            <th>Assigned</th>
+            <th className="pb-3">Assigned</th>
 
-            <th>Date</th>
+            <th className="pb-3">Date</th>
 
           </tr>
 
@@ -67,7 +67,7 @@ const LeadTable = ({ leads }) => {
              className="border-b h-20"
             >
 
-              <td>
+              <td className="py-3">
 
                 <p className="font-semibold">
 
@@ -75,7 +75,7 @@ const LeadTable = ({ leads }) => {
 
                 </p>
 
-                <p className="text-sm text-gray-400">
+                <p className="text-xs md:text-sm text-gray-400">
 
                   {lead.email}
 
@@ -112,7 +112,7 @@ const LeadTable = ({ leads }) => {
                    )
                  }
 
-                 className="border rounded-lg px-3 py-2"
+                 className="border rounded-lg px-2 md:px-3 py-2 text-sm"
                 >
 
                   <option value="new">New</option>
@@ -159,7 +159,7 @@ const LeadTable = ({ leads }) => {
                    )
                  }
 
-                 className="border rounded-lg px-3 py-2"
+                 className="border rounded-lg px-2 md:px-3 py-2 text-sm"
                 >
 
                   <option>
@@ -190,7 +190,7 @@ const LeadTable = ({ leads }) => {
 
               </td>
 
-              <td>
+              <td className="text-sm">
 
                 {
                   new Date(

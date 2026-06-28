@@ -8,16 +8,16 @@ const Landing = () => {
 
     <div className="min-h-screen bg-slate-50">
 
-      <nav className="flex justify-between items-center px-16 py-6 bg-white shadow-sm">
+      <nav className="flex flex-col sm:flex-row justify-between items-center px-4 md:px-16 py-6 bg-white shadow-sm gap-4 sm:gap-0">
 
-        <h1 className="text-3xl font-bold text-indigo-600">
+        <h1 className="text-2xl md:text-3xl font-bold text-indigo-600">
 
           LMS Pro
 
         </h1>
 
 
-        <div className="flex gap-6 items-center">
+        <div className="flex gap-4 md:gap-6 items-center">
 
           <button
             onClick={() =>
@@ -33,7 +33,7 @@ const Landing = () => {
             onClick={() =>
               navigate("/register")
             }
-            className="bg-indigo-600 text-white px-6 py-3 rounded-xl"
+            className="bg-indigo-600 text-white px-4 md:px-6 py-3 rounded-xl"
           >
             Get Started
           </button>
@@ -44,19 +44,19 @@ const Landing = () => {
 
 
 
-      <section className="grid grid-cols-2 px-20 py-20 items-center">
+      <section className="grid grid-cols-1 lg:grid-cols-2 px-4 md:px-20 py-12 md:py-20 items-center gap-10">
 
 
         <div>
 
-          <p className="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full inline-block mb-6">
+          <p className="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full inline-block mb-6 text-sm md:text-base">
 
             Smart Lead Management System
 
           </p>
 
 
-          <h1 className="text-6xl font-bold leading-tight text-slate-900">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight text-slate-900">
 
             Automate Your
 
@@ -69,7 +69,7 @@ const Landing = () => {
           </h1>
 
 
-          <p className="mt-8 text-lg text-gray-500 max-w-xl">
+          <p className="mt-8 text-base md:text-lg text-gray-500 max-w-xl">
 
             Capture, track and manage leads from Website,
             Meta Ads and Google Ads with powerful analytics.
@@ -77,7 +77,7 @@ const Landing = () => {
           </p>
 
 
-          <div className="flex gap-4 mt-10">
+          <div className="flex flex-col sm:flex-row gap-4 mt-10">
 
             <button
               onClick={() =>
@@ -101,7 +101,7 @@ const Landing = () => {
           </div>
 
 
-          <div className="flex gap-12 mt-14">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-12 mt-14">
 
             <div>
 
@@ -159,9 +159,9 @@ const Landing = () => {
 
         <div className="flex justify-center">
 
-          <div className="bg-white rounded-3xl shadow-2xl p-8 w-[550px]">
+          <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-8 w-full max-w-[550px]">
 
-            <h2 className="text-2xl font-bold mb-8">
+            <h2 className="text-xl md:text-2xl font-bold mb-8">
 
               Dashboard Preview
 
@@ -210,18 +210,18 @@ const Landing = () => {
 
       </section>
 
-      <section className="px-20 pb-20">
+      <section className="px-4 md:px-20 pb-12 md:pb-20">
 
-        <h2 className="text-4xl font-bold text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
 
           Powerful Integrations
 
         </h2>
 
 
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-          <div className="bg-white p-8 rounded-2xl shadow-lg">
+          <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg">
 
             <h3 className="text-xl font-semibold">
 
@@ -238,7 +238,7 @@ const Landing = () => {
           </div>
 
 
-          <div className="bg-white p-8 rounded-2xl shadow-lg">
+          <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg">
 
             <h3 className="text-xl font-semibold">
 
@@ -255,7 +255,7 @@ const Landing = () => {
           </div>
 
 
-          <div className="bg-white p-8 rounded-2xl shadow-lg">
+          <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg">
 
             <h3 className="text-xl font-semibold">
 

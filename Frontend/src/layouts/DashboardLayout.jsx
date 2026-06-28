@@ -12,11 +12,11 @@ const DashboardLayout = ({
 
       <Sidebar />
 
-      <div className="flex-1 p-6">
+      <div className="flex-1 p-4 md:p-6 w-full">
 
         {showNavbar && <Navbar />}
 
-        <div className={showNavbar ? "mt-8" : ""}>
+        <div className={`${showNavbar ? "mt-6 md:mt-8" : ""} pt-12 md:pt-0`}>
 
           {children}
 
