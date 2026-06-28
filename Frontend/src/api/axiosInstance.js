@@ -1,9 +1,7 @@
-// src/api/axiosInstance.js
-
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL:  "https://automated-lead-management-system-lms-for.onrender.com" ,
+  baseURL: import.meta.env.VITE_API_URL ,
 });
 
 //"http://localhost:8000/api"
