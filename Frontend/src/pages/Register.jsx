@@ -61,10 +61,10 @@ const Register = () => {
 
   return (
 
-    <div className="min-h-screen grid grid-cols-2">
+    <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
 
 
-      <div className="bg-gradient-to-br from-indigo-700 to-purple-800 text-white p-16 flex flex-col justify-center">
+      <div className="bg-gradient-to-br from-indigo-700 to-purple-800 text-white p-8 sm:p-12 md:p-16 flex flex-col justify-center">
 
         <h1 className="text-5xl font-bold mb-6">
 
@@ -94,9 +94,9 @@ const Register = () => {
 
 
 
-      <div className="bg-slate-50 flex justify-center items-center">
+      <div className="bg-slate-50 flex justify-center items-center px-4 py-8 sm:px-6">
 
-        <div className="bg-white p-10 rounded-2xl shadow-xl w-[450px]">
+        <div className="bg-white p-10 rounded-2xl shadow-xl w-full max-w-[450px]">
 
           <button
             onClick={() =>
